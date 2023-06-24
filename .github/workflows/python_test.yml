@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: ["3.11"]
+        python-version: ["3.8"]
 
     steps:
       - uses: actions/checkout@v3
@@ -19,8 +19,11 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install ruff pytest
+          pip install pytest requests
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
       - name: Test with pytest
         run: |
-          pytest
+          pytest test_json_place_holder.py
+          pytest test_json_place_holder_Q2.py
+          pytest test_StarWarsAPITestCase.py
+          
