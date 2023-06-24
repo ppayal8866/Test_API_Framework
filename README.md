@@ -1,3 +1,3 @@
-# test_API_template
+# Test_API_Framework
 
-This Pyhton Test API Framewoek demonstates the how to test different from [endpoint](https://jsonplaceholder.typicode.com/).
+This Pyhton Test API Framework demonstrates how to test different [endpoint](https://jsonplaceholder.typicode.com/).
