@@ -19,12 +19,12 @@ ENDPOINT = "https://swapi.dev/api/"
 def test_all_endpoint():
     response = requests.get(ENDPOINT)
     assert response.status_code == 200
-    pass
+
 
 def test_people_endpoint():
     response = requests.get(ENDPOINT + 'people')
     assert response.status_code == 200
-    pass
+
 
 def test_people_with_height_greater_than_200():
     response = requests.get(ENDPOINT + 'people', params={'height': '> 200'})
@@ -32,7 +32,7 @@ def test_people_with_height_greater_than_200():
     count = len(data['results'])
     expected_count = 10
     assert count == expected_count
-    pass
+
 
 def test_total_people_count():
     response = requests.get(ENDPOINT + 'people')
@@ -40,13 +40,13 @@ def test_total_people_count():
     count = data['count']
     expected_count = 82
     assert count == expected_count
-    pass
+ 
     
     
 def test_specific_people():
     response = requests.get(ENDPOINT + 'people')
     data = json.loads(response.text)
-    print('----response data:',data)
+    # print('----response data:',data)
     
     # Extract the list of individuals
     individuals = data.get('results', [])
