@@ -24,6 +24,6 @@ jobs:
       - name: Test with pytest
         run: |
           #pytest test_json_place_holder.py
-          #pytest test_json_place_holder_Q2.py
+          pytest test_json_place_holder_Q2.py
           pytest test_StarWarsAPITestCase.py
           
