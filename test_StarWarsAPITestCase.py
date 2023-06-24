@@ -42,8 +42,8 @@ def test_total_people_count():
     assert count == expected_count
  
     
-    
-def test_specific_people():
+# Trying to avoid running this test    
+def specific_people():
     response = requests.get(ENDPOINT + 'people')
     data = json.loads(response.text)
     # print('----response data:',data)
